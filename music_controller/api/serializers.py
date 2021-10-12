@@ -1,9 +1,11 @@
 '''
-this module will take a python model and return a json object so that we can pass it to the front end
+this module takes a python model (db object)  and return a json object so that we can pass it to the front end
 '''
 
 from rest_framework import serializers
 from .models import Room
+
+# this class takes a 'Room' class/object and returns a json object with the specified 'fields' using the Modelserializer (inherited)
 
 
 class RoomSerializer(serializers.ModelSerializer):

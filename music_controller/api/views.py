@@ -6,7 +6,12 @@ from .models import Room
 
 # Create your views here.
 
+'''
+ we can have both functions and classes fuctioning as views
+'''
 
-class RoomView(generics.ListAPIView):
-    queryset = Room.objects.all()
-    serializer_class = RoomSerializer
+
+class RoomView(generics.CreateAPIView):
+    # we need to provide the 2 following objects for this view - queryset & serializer_class
+    queryset = Room.objects.all()  # what do we want to return
+    serializer_class = RoomSerializer  # convert to json object
